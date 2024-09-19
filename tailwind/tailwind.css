@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  direction: rtl;
+  box-sizing: border-box;
+}
+
+@layer components {
+  .body {
+    @apply bg-[#151515];
+  }
+  .menuWrapper {
+    @apply desktop:flex-row desktop:flex desktop:justify-between desktop:items-center mobile:items-start w-[100%] desktop:h-[60px] mobile:h-[100%] desktop:py-[20px] bg-black desktop:px-[80px] relative mobile:flex-col-reverse;
+  }
+  .desktopSize {
+    @apply mobile:hidden desktop:flex;
+  }
+  .mobileSize {
+    @apply desktop:hidden;
+  }
+  .menuRightAndMidWrapper {
+    @apply flex flex-row items-center;
+  }
+  .menuRightAndLeftWrapper {
+    @apply flex flex-row w-[100%] justify-between;
+  }
+  .menuRight {
+    @apply flex items-center justify-start pl-[20px];
+  }
+  .menuRight__img {
+    @apply h-[20px];
+  }
+  .menu__separator {
+    @apply w-[1px] h-[20px] desktop:block bg-gray-400 ml-[20px] mobile:hidden;
+  }
+  .menuMid {
+    @apply flex items-center desktop:overflow-auto mobile:overflow-scroll;
+  }
+  .menuMid__item {
+    @apply flex desktop:flex-row desktop:flex-wrap mobile:flex-nowrap items-center justify-center text-white py-[10px]
+        ml-[20px];
+  }
+  .menuMid__item__svg {
+    @apply ml-[5px];
+  }
+  .menuMid__item__text {
+    @apply pb-[5px] text-[12px] flex flex-row flex-nowrap mobile:flex-nowrap;
+  }
+  .menuLeft {
+    @apply flex flex-row items-center justify-between gap-[20px] py-[10px];
+  }
+  .menuLeft__subscription {
+    @apply flex flex-row items-center justify-center bg-[#1cb561] h-[40px] rounded-[5px]  py-[16px] px-[10px];
+  }
+  .menuLeft__subscription__text {
+    @apply mb-[5px] text-white text-[12px] font-bold;
+  }
+  .menuLeft__subscription__svg {
+    @apply ml-[5px];
+  }
+  .menuLeft__login {
+    @apply bg-[#434343] w-[60px] h-[40px] leading-[35px] justify-center rounded-[5px] flex;
+  }
+  .menuLeft__login__text {
+    @apply text-white text-[12px] font-bold;
+  }
+  .paymentWrapper {
+    @apply h-[450px] w-[100%] flex flex-col pb-[35px] justify-end items-center;
+  }
+  .paymentBgWrapper {
+    @apply h-[450px] w-[100%] absolute top-0 z-[-1] bg-gradient-to-b from-payment_t from-20% via-payment_mid via-40% to-payment_b to-100%;
+  }
+  .paymentBg__img {
+    @apply h-[450px] w-screen absolute top-0 z-[-2];
+  }
+  .paymentWrapper__text1 {
+    @apply text-[14px] text-[#f9a73d] pb-[10px];
+  }
+  .paymentWrapper__text2 {
+    @apply flex flex-row flex-wrap mobile:items-center mobile:justify-center w-[100%] text-[35px] mobile:text-[30px] text-white font-bold mb-[32px];
+  }
+  .subscriptionOpportunitiesWrapper {
+    @apply flex desktop:flex-row mobile:flex-col items-center justify-between w-[100%] px-[70px] mb-[65px];
+  }
+  .subscriptionOpportunities__item {
+    @apply flex flex-row items-center justify-center gap-[5px] w-[100%];
+  }
+  .subOpper__item__svgWrapper {
+    @apply flex rounded-[50%] bg-subOpper fill-[#00f46e] w-[16px] h-[16px] flex-row items-center justify-center;
+  }
+  .item-text {
+    @apply text-[#b9b9b9] text-[14px] mb-[3px];
+  }
+  .buyingSubscriptionBtn {
+    @apply h-[60px] w-[285px] bg-green-500 flex flex-row items-center justify-center rounded-[7px] gap-[7px];
+  }
+  .buyingSubscription__text {
+    @apply mb-[5px] text-white text-[16px] font-bold;
+  }
+  .payment__discount {
+    @apply flex flex-row items-center justify-center gap-[5px] mt-[8px];
+  }
+  .discount__text {
+    @apply text-[#959ba2] text-[10px];
+  }
+  .bestOfFilimo {
+    @apply flex;
+  }
+  .bof__wrapper {
+    @apply flex flex-col w-[100%] desktop:px-[80px] mobile:px-[10px];
+  }
+  .bof__header {
+    @apply flex flex-row items-center justify-start mb-[40px] w-[100%];
+  }
+  .bof__header__text {
+    @apply ml-4 text-[17px] text-white;
+  }
+  .bof__header__switch {
+    @apply flex flex-row items-center justify-center border rounded-[35px] p-[3px];
+  }
+  .bof__header__switch__movie {
+    @apply text-white text-[15px] mx-[8px] pb-[3px] font-bold;
+  }
+  .bof__header__switch__sereis {
+    @apply text-white text-[15px] mx-[8px] pb-[3px] font-bold;
+  }
+  .bof__imgsWrapper {
+    @apply flex flex-row items-center justify-start gap-[10px];
+  }
+  .bof__movieWrapper {
+    @apply flex flex-row items-center justify-start gap-[20px] mobile:overflow-scroll desktop:overflow-auto;
+  }
+  .bof__filmsInfo {
+    @apply flex flex-col items-center w-[100%] h-[400px] mt-[30px];
+  }
+  .bof__seriesInfoWrapper {
+    @apply flex flex-col items-center w-[100%];
+  }
+  .bof__series-top-Wrapper {
+    @apply flex flex-row items-center justify-between w-[100%] text-white;
+  }
+  .bof__series-top-rightWrapper {
+    @apply self-start flex flex-col w-[100%] gap-[7px];
+  }
+  .bof__series-top__title {
+    @apply mb-[10px];
+  }
+  .bof__series-top__director {
+    @apply text-[#a1a1a1];
+  }
+  .bof__series-top__genersWrapper {
+    @apply flex flex-row items-center justify-start gap-[10px];
+  }
+  .bof__series-top__gener {
+    @apply bg-[#282828] px-[15px] pb-[2px] rounded-[15px];
+  }
+  .bof__series-top__text {
+    @apply flex w-[100%] overflow-hidden;
+  }
+}
